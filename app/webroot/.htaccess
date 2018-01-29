@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+AuthName "Page d'administration protegee"
+AuthType Basic
+AuthUserFile "/kunden/homepages/27/d717730447/htdocs/dev/app/webroot/.htpasswd"
+Require valid-user
+
+    Options +FollowSymLinks
+    RewriteBase /
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+	RewriteEngine On
+    RewriteCond %{HTTP} off
+    RewriteRule (.*) http://clan-frui.fr/$1 [R]
+</IfModule>
