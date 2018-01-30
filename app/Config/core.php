@@ -109,7 +109,7 @@
  * included primarily as a development convenience - and
  * thus not recommended for production applications.
  */
-Configure::write('App.baseUrl', '/');   
+Configure::write('App.baseUrl', '/');
 
 /**
  * To configure CakePHP to use a particular domain URL

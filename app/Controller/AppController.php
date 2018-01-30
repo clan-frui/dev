@@ -108,6 +108,8 @@ class AppController extends Controller {
         }
 
 
+        $this->Auth->allow();
+
         $this->set('baseUrl', $baseUrl);
         $this->set('supperRole', $this->supperRole);
     }
